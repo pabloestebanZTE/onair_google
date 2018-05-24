@@ -1,0 +1,21 @@
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /user_guide
+  static_dir: onair/user_guide
+
+- url: /assets/js/*
+  static_dir: onair/assets/js
+
+- url: /assets/css/*
+  static_dir: onair/assets/css
+
+- url: /assets/images/*
+  static_dir: onair/assets/images
+
+- url: /
+  script: onair/index.php
+
+- url: /(.+)
+  script: onair/index.php
